@@ -19,7 +19,6 @@ int main(int argc, char **argv, char **env)
 	if (check != '\0')
 		write(1, "\nCHAMPIONS$", 10);
 
-	/* signal (sigint, handler) */
 	while ((input = getline(&buffer, &bufsize, stdin)))
 	{
 		if (input == EOF)
