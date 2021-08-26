@@ -9,7 +9,7 @@
 int main(int argc, char **argv, char **env)
 {
 	char *buffer; /*buffer lo guarda todo */
-	char **args;
+	char **args; /* argumentos que esta pasando el usuario */
 	size_t bufsize; /* contiene lo que queremos de buffer */
 	ssize_t input; /* recoge el resultado de getline */
 	int check, idx;
@@ -24,7 +24,7 @@ int main(int argc, char **argv, char **env)
 		if (input == EOF)
 		{
 			free(buffer);
-			exit(0);
+			exit(0); /* Exit with success */
 		}
 		++idx;
 

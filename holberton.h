@@ -14,6 +14,10 @@
 /******** env_func **********/
 void env_exit(char *buffer, char **args, char **env);
 void _error(char **argv, char *arg, int amt);
+void env_cmd(char **envmnt);
+char *_env(const char *str, char **envmnt);
+char **env_arr(char *cmd, char **envmnt);
+
 
 /******** free_func *********/
 void free_arr(char **arr);
@@ -28,19 +32,16 @@ int _atoi(char *arg);
 
 /******** path_func **********/
 void path_handle(char **args, char *buffer, char **env, char **argv, int amt);
+unsigned int dir_check(char *path);
 
 /******** process_func *******/
 void _fork(char **args, char **argv, char **env, char *buffer, int amt);
 void exitcmd(char *buffer, char **args);
 
-/***** Missing func ******/
-char **env_arr(char *cmd, char **environ);
-unsigned int dir_check(char *path);
-char *_env(const char *key, char **environ);
-void env_cmd(char **environ);
+/***** More_helpfunc ******/
 char *_cmdcpy(char *dest, char *src, char *cmd, int amt, int count);
-char *_cpyarg(char *dest, const char *src, int n);
-unsigned int _envlen(const char *name);
-int _strcmp(char *s1, char *s2);
+char *_cpyarg(char *dest, const char *src, int amt);
+unsigned int _envlen(const char *str);
+int _strcmp(char *str1, char *str2);
 
 #endif /* HOLBERTON_H_ */

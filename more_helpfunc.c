@@ -16,7 +16,7 @@ char *_cmdcpy(char *dest, char *src, char *cmd, int amt, int count)
 		dest[idx] = src[idx];
 	dest[idx] = '/';
 	idx++;
-	for (vidx = 0; vidx < count && cmd[vidx] != '\0'; vidx++, idx++)
+	for (vidx = 0; (vidx < count) && cmd[vidx] != '\0'; vidx++, idx++)
 		dest[idx] = cmd[vidx];
 
 	dest[idx] = '\0';
