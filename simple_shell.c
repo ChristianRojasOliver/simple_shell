@@ -17,7 +17,7 @@ int main(int argc, char **argv, char **env)
 
 	check = isatty(STDIN_FILENO);
 	if (check != '\0')
-		write(1, "\nCHAMPIONS$", 10);
+		write(1, "CHAMPIONS$ ", 11);
 
 	while ((input = getline(&buffer, &bufsize, stdin)))
 	{
@@ -33,7 +33,7 @@ int main(int argc, char **argv, char **env)
 
 		bufsize = 0;
 		if (isatty(STDOUT_FILENO))
-			write(STDOUT_FILENO, "CHAMPIONS$", 10);
+			write(STDOUT_FILENO, "CHAMPIONS$ ", 11);
 		buffer = NULL;
 	}
 	if (input == -1)
